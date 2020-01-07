@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+    container_name: axxess-php-coding-challenge
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    image: php-challenge:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - "./project:/var/www/html"
+    working_dir: /var/www/html
